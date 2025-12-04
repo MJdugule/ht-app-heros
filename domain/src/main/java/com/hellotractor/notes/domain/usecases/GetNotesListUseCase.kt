@@ -2,7 +2,7 @@ package com.hellotractor.notes.domain.usecases
 
 import com.hellotractor.notes.domain.models.Note
 import com.hellotractor.notes.domain.repositories.NotesRepository
-import jakarta.inject.Inject
+import javax.inject.Inject
 
 class GetNotesListUseCase @Inject constructor(private val repository: NotesRepository) {
 

@@ -1,17 +1,14 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.ksp)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.hiltApplication)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.hellotractor.notes.theme"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -34,10 +31,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlin {
-        compilerOptions {
-            jvmTarget = JvmTarget.JVM_11
-        }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 

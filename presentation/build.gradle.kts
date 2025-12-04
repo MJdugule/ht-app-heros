@@ -1,29 +1,24 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.ktLint)
     alias(libs.plugins.protobuf)
-    alias(libs.plugins.hiltApplication)
-    alias(libs.plugins.google.crashlytics)
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.parcelize)
-    alias(libs.plugins.safe.args.navigation)
-    alias(libs.plugins.google.services)
+    // Crashlytics and Google Services should be applied only to the application module (app)
 }
 
 android {
     namespace = "com.hellotractor.notes.presentation"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        //consumerProguardFiles("consumer-rules.pro")
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -40,10 +35,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlin {
-        compilerOptions {
-            jvmTarget = JvmTarget.JVM_11
-        }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 

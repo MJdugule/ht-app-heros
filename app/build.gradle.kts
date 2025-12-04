@@ -5,24 +5,21 @@ plugins {
     alias(libs.plugins.ktLint)
     alias(libs.plugins.protobuf)
     alias(libs.plugins.hiltApplication)
-    alias(libs.plugins.google.crashlytics)
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.parcelize)
     alias(libs.plugins.safe.args.navigation)
-    alias(libs.plugins.google.services)
+    // Google services / Crashlytics plugins temporarily disabled for local build to avoid task cycles
 }
 
 android {
     namespace = "com.hellotractor.android.notes"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.hellotractor.android.notes"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -42,10 +39,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlin {
-        compilerOptions {
-            jvmTarget = JvmTarget.JVM_11
-        }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 
@@ -84,7 +79,6 @@ dependencies {
     testImplementation(libs.hilt.android.unit)
     androidTestImplementation(libs.hilt.android.unit)
     kspAndroidTest(libs.hilt.compiler)
-    androidTestAnnotationProcessor(libs.hilt.compiler)
     kspTest(libs.hilt.compiler)
     androidTestImplementation(libs.androidx.test.runner)
     androidTestUtil(libs.androidx.test.orchestrator)

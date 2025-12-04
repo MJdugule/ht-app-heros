@@ -1,74 +1,70 @@
 [versions]
-agp = "8.13.1"
-kotlin = "2.0.21"
-coreKtx = "1.17.0"
+agp = "8.4.1"
+kotlin = "2.0.0"
+coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.3.0"
-espressoCore = "3.7.0"
-appcompat = "1.7.1"
-material = "1.13.0"
-activity = "1.11.0"
-constraintlayout = "2.2.1"
-jetbrainsKotlinJvm = "2.2.21"
-fragmentKtx = "1.8.9"
-mockitoKotlin = "5.3.1"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+jetbrainsKotlinJvm = "1.9.22"
+fragmentKtx = "1.7.1"
+mockitoKotlin = "5.2.1"
 protobufGradlePlugin = "0.9.4"
-workManager = "2.11.0"
-kotlinSerialization = "1.9.0"
-swipeToRefresh = "1.2.0-beta01"
-desugaring = "2.1.5"
+workManager = "2.9.0"
+kotlinSerialization = "1.7.0"
+swipeToRefresh = "1.1.0"
+desugaring = "2.0.4"
 resultat = "1.0.0"
-imgGlide = "5.0.5"
-coroutines = "1.10.2"
-customFab = "1.2.1"
-kLintVersion = "14.0.1"
-room = "2.8.3"
-crashlyticsPlugin = "3.0.6"
-browserTab = "1.9.0"
-hilt = "2.57.2"
-hiltWorker = "1.3.0"
-navigation = "2.9.6"
-retrofit = "3.0.0"
-ksp = "2.0.21-1.0.27"
-chucker = "4.2.0"
-okhttp = "5.3.1"
-splashTheme = "1.2.0"
-lifecycleVersion = "2.9.4"
+imgGlide = "4.16.0"
+coroutines = "1.8.0"
+customFab = "1.0.0"
+kLintVersion = "12.1.0"
+room = "2.6.1"
+crashlyticsPlugin = "3.0.0"
+browserTab = "1.8.0"
+hilt = "2.51.1"
+hiltWorker = "1.2.0"
+navigation = "2.7.7"
+retrofit = "2.9.0"
+ksp = "2.0.0-1.0.21"
+chucker = "4.0.0"
+okhttp = "4.12.0"
+splashTheme = "1.0.1"
+lifecycleVersion = "2.8.0"
 archVersion = "2.2.0"
 legacySupportV4 = "1.0.0"
-protoDatastore = "1.1.7"
-firebaseBom = "34.6.0"
-remoteConfig = "22.1.2"
-androidxEspresso = "3.7.0"
-firebaseMessaging = "24.1.2"
-firebaseInstallation = "19.0.1"
-protoBuffDatastore = "4.33.1"
-playCrashlytics = "19.4.4"
-coilVersion = "2.7.0"
-imgCircular = "3.1.0"
-androidxArchCore = "2.2.0"
-timberLogger = "5.0.1"
-protoBuffPlugin = "0.9.5"
-kotlinSerializationPlugin = "2.2.21"
-kotlinExtensions = "2.1"
-phonePinView = "1.4.4"
-ccpVersion = "2.7.3"
-playMaps = "19.2.0"
+protoDatastore = "1.1.0"
+firebaseBom = "33.0.0"
+remoteConfig = "21.6.3"
+androidxEspresso = "3.5.1"
+firebaseMessaging = "23.4.1"
+firebaseInstallation = "17.2.0"
+protoBuffDatastore = "3.25.3"
+playCrashlytics = "18.6.4"
+coilVersion = "2.6.0"
+protoBuffPlugin = "0.9.4"
+kotlinSerializationPlugin = "1.9.22"
+kotlinExtensions = "1.2"
+ccpVersion = "2.7.0"
+playMaps = "18.2.0"
 playUpdate = "2.1.0"
-playLocation = "21.3.0"
-playMapUtils = "3.19.1"
-playPlaces = "5.0.0"
-parcelizePlugin = "2.2.21"
-mockito = "5.20.0"
-mockk = "1.14.6"
-junitJunit = "4.12"
+playLocation = "21.2.0"
+playMapUtils = "3.8.0"
+playPlaces = "3.4.0"
+parcelizePlugin = "1.9.22"
+mockito = "5.11.0"
+mockk = "1.13.10"
+junitJunit = "4.13.2"
 movableExandableFab = "1.0.4"
-firebaseMessagingVersion = "25.0.1"
-firebaseDatabase = "22.0.1"
-playReview = "2.0.2"
-amplitude = "1.22.4"
-gson = "2.13.2"
-firebaseAuth = "24.0.1"
+firebaseMessagingVersion = "23.4.1"
+firebaseDatabase = "21.0.0"
+playReview = "2.0.1"
+amplitude = "1.10.0"
+gson = "2.10.1"
+firebaseAuth = "22.3.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -110,7 +106,6 @@ firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging
 firebase-remote-config = { group = "com.google.firebase", name = "firebase-config-ktx", version.ref = "remoteConfig" }
 
 image-coil = { group = "io.coil-kt", name = "coil", version.ref = "coilVersion" }
-image-circular = { group = "de.hdodenhof", name = "circleimageview", version.ref = "imgCircular" }
 image-coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coilVersion" }
 image-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "imgGlide" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
@@ -138,16 +133,16 @@ chucker-debug = { group = "com.github.chuckerteam.chucker", name = "library", ve
 chucker-release = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref="chucker" }
 
 com-google-truth = { group = "com.google.truth", name = "truth", version = "1.4.5" }
-androidx-arch-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "androidxArchCore" }
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 core-library-desugaring = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugaring" }
 resultat = { group = "fr.haan.resultat", name = "resultat", version.ref = "resultat" }
 
-timber-logger = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberLogger" }
-phone-pin-view = { group = "io.github.chaosleung", name = "pinview", version.ref = "phonePinView" }
 country-code-picker = { group = "com.hbb20", name = "ccp", version.ref = "ccpVersion" }
 custom-fab = { group = "com.nambimobile.widgets", name = "expandable-fab", version.ref = "customFab" }
 expandable-fab = { group = "io.github.hussienfahmy", name = "mefab", version.ref = "movableExandableFab" }
+
+google-play-update = { group = "com.google.android.play", name = "app-update", version.ref = "playUpdate" }
+google-play-update-ktx = { group = "com.google.android.play", name = "app-update-ktx", version.ref = "playUpdate" }
 
 org-json = { group = "org.json", name = "json", version = "20250517" }
 app-cash-turbine = { group = "app.cash.turbine", name = "turbine", version = "1.2.1" }
@@ -189,8 +184,6 @@ com-jakewharton-att = { group = "com.jakewharton.threetenabp", name = "threetena
 
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playMaps" }
 google-places = { group = "com.google.android.libraries.places", name = "places", version.ref = "playPlaces" }
-google-play-update = { group = "com.google.android.play", name = "app-update", version.ref = "playUpdate" }
-google-play-update-ktx = { group = "com.google.android.play", name = "app-update-ktx", version.ref = "playUpdate" }
 google-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playLocation" }
 com-google-map-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "playMapUtils" }
 google-play-review = { group = "com.google.android.play", name = "review", version.ref = "playReview" }
@@ -220,23 +213,22 @@ protobuf = { id = "com.google.protobuf", version.ref = "protoBuffPlugin" }
 android = ["androidx-activity", "androidx-appcompat", "androidx-constraint-layout", "androidx-core-ktx", "androidx-coroutines", "androidx-fragment-ktx", "androidx-splash", "androidx-work-manager", "androidx-serialization", "androidx-swipe-refresh"]
 google = ["google-material"]
 google-playstore = ["google-play-update", "google-play-update-ktx"]
-utilities = ["timber-logger", "custom-fab"]
-otp = ["phone-pin-view", "country-code-picker"]
+utilities = ["custom-fab"]
+otp = ["country-code-picker"]
 room = ["room-ktx", "room-paging", "room-runtime"]
 hilt = ["hilt-android", "hilt-worker"]
 coroutines = ["androidx-coroutines", "androidx-coroutines-android"]
 datastore = ["androidx-datastore", "com-google-protobuf-javalite", "androidx-datastore-core", "androidx-datastore-preferences"]
 firebase = ["firebase-bom", "firebase-crashlytics", "firebase-installation", "firebase-messaging"]
-image-tools = ["image-circular", "image-coil", "image-coil-gif", "image-glide"]
+image-tools = ["image-coil", "image-coil-gif", "image-glide"]
 navigation = ["androidx-navigation-fragment", "androidx-navigation-ui"]
 retrofit = ["androidx-retrofit", "androidx-retrofit-gson", "com-squareup-okhttp3-okhttp", "okhttp-interceptor"]
 viewModels = ["androidx-viewmodel", "androidx-lifecycle-runtime", "androidx-livedata", "androidx-saved-state"]
-maps = ["google-location", "google-maps", "com-google-map-utils", "google-places", "google-play-update", "google-play-update-ktx"]
+maps = ["google-location", "google-maps", "com-google-map-utils", "google-places"]
 review = ["google-play-review", "google-play-review-ktx"]
 
 # List of unit test dependencies
 unit-test-dependinces = [
-    "androidx-arch-core-testing",
     "org-mockito-kotlin",
     "org-jetbrains-kotlinx-coroutines-test",
     "org-mockito-core",
@@ -250,7 +242,6 @@ unit-test-dependinces = [
 
 # List of android test dependencies
 android-test-dependencies = [
-    "androidx-arch-core-testing",
     "androidx-legacy-support-v4",
     "androidx-room-testing",
     "androidx-test-rules",
@@ -276,5 +267,3 @@ android-ui-test-dependencies = [
     "androidx-test-espresso-contrib",
     "io-mockk-android"
 ]
-
-
