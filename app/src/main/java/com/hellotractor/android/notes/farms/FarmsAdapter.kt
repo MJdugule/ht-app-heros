@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hellotractor.notes.domain.models.Note
 import com.hellotractor.android.notes.R
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class FarmsAdapter : ListAdapter<Note, FarmsAdapter.VH>(DIFF) {
 
@@ -24,10 +26,16 @@ class FarmsAdapter : ListAdapter<Note, FarmsAdapter.VH>(DIFF) {
     class VH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val title: TextView = itemView.findViewById(R.id.farm_title)
         private val subtitle: TextView = itemView.findViewById(R.id.farm_subtitle)
+        private val content: TextView = itemView.findViewById(R.id.farm_content)
 
         fun bind(note: Note) {
             title.text = note.title
-            subtitle.text = "${note.type.name} • ${note.dateCreated}"
+            val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            val outputFormat = SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault())
+            val date = inputFormat.parse(note.dateCreated)
+            val formattedDate = outputFormat.format(date)
+            subtitle.text = "${note.type.name} • $formattedDate"
+            content.text = note.content
         }
     }
 
