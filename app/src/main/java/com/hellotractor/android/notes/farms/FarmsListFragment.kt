@@ -84,7 +84,6 @@ class FarmsListFragment : Fragment() {
             }
         }
 
-        // actions (one-off)
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
                 vm.actions.collect { action ->

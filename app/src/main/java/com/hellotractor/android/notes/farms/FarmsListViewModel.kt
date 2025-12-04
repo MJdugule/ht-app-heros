@@ -26,7 +26,6 @@ class FarmsListViewModel @Inject constructor(
     val actions: SharedFlow<FarmsAction> = _actions.asSharedFlow()
 
     init {
-        // default load ordered by date (most recent first)
         sendEvent(FarmsEvent.Load)
     }
 
@@ -42,10 +41,8 @@ class FarmsListViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, errorMessage = null)
             try {
-                // small UI delay so the center progress indicator is visible before data appears
                 if (useDelay) kotlinx.coroutines.delay(600)
 
-                // fetch unsorted (we'll sort locally as needed)
                 val raw = getNotesListUseCase.run(sortByDate = false)
 
                 val notes = when (order) {
@@ -63,7 +60,7 @@ class FarmsListViewModel @Inject constructor(
                 _state.value = _state.value.copy(notes = emptyList(), errorMessage = t.message ?: "Unknown error")
                 _actions.emit(FarmsAction.ShowError(t.message ?: "Failed to load"))
             } finally {
-                // always clear loading flag so UI loaders (including SwipeRefreshLayout) stop
+
                 _state.value = _state.value.copy(isLoading = false)
             }
         }

@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // NavigationHost handles fragment transactions (nav_graph set in layout)
+     
     }
 }
