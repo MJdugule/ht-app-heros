@@ -51,16 +51,13 @@ class FarmsListViewModel @Inject constructor(
                 }
 
                 _state.value = _state.value.copy(
-                    isLoading = false,
                     notes = notes,
                     selectedOrder = order,
-                    errorMessage = null
                 )
             } catch (t: Throwable) {
-                _state.value = _state.value.copy(notes = emptyList(), errorMessage = t.message ?: "Unknown error")
+                _state.value = _state.value.copy(errorMessage = t.message ?: "Unknown error")
                 _actions.emit(FarmsAction.ShowError(t.message ?: "Failed to load"))
             } finally {
-
                 _state.value = _state.value.copy(isLoading = false)
             }
         }

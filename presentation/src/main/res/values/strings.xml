@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloTractor</string>
+    <string name="order_by_date">Order by date</string>
+    <string name="order_by_category">Order by category</string>
+    <string name="farms_title">Farms</str    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+ing>
+</resources>

@@ -5,13 +5,6 @@ import com.hellotractor.notes.domain.models.Note
 
 enum class OrderType { DATE, CATEGORY }
 
-data class FarmsState(
-    val isLoading: Boolean = false,
-    val notes: List<Note> = emptyList(),
-    val selectedOrder: OrderType = OrderType.DATE,
-    val errorMessage: String? = null
-)
-
 sealed class FarmsEvent {
     object Load : FarmsEvent()
     object Refresh : FarmsEvent()

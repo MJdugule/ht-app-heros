@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.hiltApplication)
     alias(libs.plugins.ktLint)
     alias(libs.plugins.protobuf)
     alias(libs.plugins.jetbrains.kotlin.parcelize)
@@ -38,9 +39,14 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation(project(":domain"))
     implementation(libs.bundles.coroutines)
     implementation(libs.bundles.android)
     implementation(libs.bundles.hilt)

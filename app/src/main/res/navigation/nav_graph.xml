@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/farmsListFragment">
 
     <fragment
         android:id="@+id/farmsListFragment"
         android:name="com.hellotractor.android.notes.farms.FarmsListFragment"
-        android:label="@string/app_name" />
+        android:label="@string/farms_title" >
+        <action
+            android:id="@+id/action_farmsListFragment_to_farmDetailsFragment"
+            app:destination="@id/farmDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmDetailsFragment"
+        android:name="details.FarmDetailsFragment"
+        android:label="fragment_farm_details"
+        tools:layout="@layout/fragment_farm_details" />
 
 </navigation>
